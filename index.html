@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+</head> 
+<body ng-app="rutasApp" class="container">
+
+	<h1>Hola :D</h1>
+
+	<div class="list-group col-xs-3">
+		<a ui-sref="categoria" class="list-group-item">Ir a Categoria</a>
+		<a ui-sref="entidades" class="list-group-item">Ir a Entidad</a>
+		<a ui-sref="level" class="list-group-item">Ir a Nivel</a>
+		<a ui-sref="test" class="list-group-item">Ir a Test</a>
+		<a ui-sref="preguntas" class="list-group-item">Ir a Preguntas</a>
+		<a ui-sref="usuarios" class="list-group-item">Ir a Usuarios</a>
+		<a ui-sref="idiomas" class="list-group-item">Ir a Idiomas</a>
+		<a ui-sref="inscripciones" class="list-group-item">Ir a Inscripciones</a>
+		<a ui-sref="examen" class="list-group-item">Ir a Examen</a>
+		<a ui-sref="respuestas" class="list-group-item">Ir a Respuestas</a>
+		<a ui-sref="bug" class="list-group-item">Ir a Bug</a>
+	</div>
+
+
+
+
+
+	<div class="col-xs-8">
+		<div class="mivista" ui-view></div>
+	</div>
+
+<script type="text/javascript" src="scripts/libs/jquery.js"></script>
+<script type="text/javascript" src="scripts/libs/angular.js"></script>
+<script type="text/javascript" src="scripts/libs/angular-ui-router.js"></script>
+<script type="text/javascript" src="scripts/libs/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="scripts/libs/angular-animate.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/CategoriasCtrl.js"></script>
+<script type="text/javascript" src="scripts/EntidadesCtrl.js"></script>
+<script type="text/javascript" src="scripts/LevelCtrl.js"></script>
+<script type="text/javascript" src="scripts/TestCtrl.js"></script>
+<script type="text/javascript" src="scripts/UsuariosCtrl.js"></script>
+<script type="text/javascript" src="scripts/IdiomasCtrl.js"></script>
+<script type="text/javascript" src="scripts/InscripcionesCtrl.js"></script>
+<script type="text/javascript" src="scripts/ExamenCtrl.js"></script>
+<script type="text/javascript" src="scripts/RespuestasCtrl.js"></script>
+<script type="text/javascript" src="scripts/BugCtrl.js"></script>
+</body>
+</html>

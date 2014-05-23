@@ -1,0 +1,64 @@
+<h1>Usuario :D</h1>
+
+<form ng-submit="SaveNewUsuario()" name="frmNewUser" ng-show="mostrando">
+	<fieldset>
+ 		<div class="col-xs-7">
+			Nombre: <input type="text"  class="form-control" ng-model="UsuarioNuevo.first_name" ></div><br>
+		<div class="col-xs-7">
+			Apellido: <input type="text" class="form-control" ng-model="UsuarioNuevo.last_name" ></div> <br>
+		<div class="col-xs-7">
+			Username: <input type="text" class="form-control" ng-model="UsuarioNuevo.username" ></div><br>
+		<div class="col-xs-7">
+			Password: <input type="text" class="form-control" ng-model="UsuarioNuevo.password" ></div> <br>
+		<div class="col-xs-7">
+			Celular: <input type="texto" class="form-control" ng-model="UsuarioNuevo.cell"> </div><br>
+		<div class="col-xs-7">
+			Dirección: <input type="texto" class="form-control" ng-model="UsuarioNuevo.direccion" ></div><br>
+		<div class="col-xs-7">
+			E-mail: <input type="texto" class="form-control" ng-model="UsuarioNuevo.email"></div><br>
+ </fieldset>
+</div> 
+		
+	</div> <br> 
+
+	<input type="submit" class="btn btn-success" value="Crear">
+	<input type="button" class="btn btn-warning" value="Cancelar" ng-click="ocultarForm()">
+</form>
+
+<hr/>
+
+<button ng-show="btCrearMostrar" ng-click="mostrarForm()" class="btn btn-primary">Crear Usuario</button>
+
+<table class="table table-hover">
+  <thead> <br>
+   	<tr>
+		<td>Id</td>	
+		<td>User</td>
+		<td>Nombre</td>
+		<td>Apellido</td>
+		<td>Password</td>
+		<td>Cell</td>
+		<td>email</td>
+		<td>Dirección</td>
+		<td>Eliminar</td>
+	</tr>
+   </thead>
+	
+	
+  <tbody>
+  	<tr ng-repeat="(key, usuario) in Usuarios ">
+		<td>{{ key+1 }}</td>
+		<td>{{ usuario.username }}</td>
+		<td>{{ usuario.first_name }}</td>
+		<td>{{ usuario.last_name }}</td>
+		<td>{{ usuario.password }}</td>
+		<td>{{ usuario.cell }}</td>
+		<td>{{ usuario.email }}</td>
+		<td>{{ usuario.direccion }}</td>
+
+		<td><a ng-click="DeleteUsu(usuario, key)" href="#">Eliminar</a></td>
+	</tr>
+
+  </tbody>
+  
+</table>

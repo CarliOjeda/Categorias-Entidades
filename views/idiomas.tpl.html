@@ -1,0 +1,53 @@
+<h1>Estos son los Idiomas</h1>
+<form ng-submit="SaveNewIdioma()" name="frmNewUser" ng-show="mostrando"> 
+	<fieldset>
+ 		 <legend>Ingresa los datos:</legend>
+
+ 		 <div class="col-xs-7">
+			Código: <input type="text"  class="form-control" ng-model="IdiomaNuevo.codigo"></div><br>
+		<div class="col-xs-7">
+			Código 2: <input type="text" class="form-control" ng-model="IdiomaNuevo.codigo2"></div> <br>
+		<div class="col-xs-7">
+			Descripción: <input type="text"  class="form-control" ng-model="IdiomaNuevo.descripcion"></div><br>
+		<div class="col-xs-7">
+			Original: <input type="text" class="form-control" ng-model="IdiomaNuevo.original"></div> <br>
+		
+ </fieldset>
+	<br> 
+
+	<input type="submit" class="btn btn-success" value="Crear">
+	<input type="button" class="btn btn-warning" value="Cancelar" ng-click="ocultarForm()">
+</form>
+
+<hr/>
+
+<button ng-show="btCrearMostrar" ng-click="mostrarForm()" class="btn btn-primary">Crear Idiomas</button>
+
+<table class="table table-hover">
+  <thead> <br>
+   	<tr>
+		<td>Id°</td>	
+		<td>Código</td>
+		<td>Código 2</td>
+		<td>Descripción</td>
+		<td>Original</td>
+		<td>Eliminar</td>
+	</tr>
+   </thead>
+	
+	
+  <tbody>
+  	<tr ng-repeat="(key, idioma) in Idiomas ">
+		<td>{{ key+1 }}</td>
+		<td>{{ idioma.codigo }}</td>
+		<td>{{ idioma.codigo2 }}</td>
+		<td>{{ idioma.descripcion }}</td>
+		<td>{{ idioma.original }}</td>
+	
+
+		<td><a ng-click="DeleteIdioma(idioma, key)" href="#">Eliminar</a></td>
+	</tr>
+
+  </tbody>
+  
+</table>
